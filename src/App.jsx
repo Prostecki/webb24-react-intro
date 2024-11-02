@@ -1,14 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Booklist from "./components/Booklist";
 import Aside from "./components/Aside";
+import Footer from "./components/Footer";
+import UserGreetings from "./components/UserGreetings";
+import ProductList from "./components/ProductList";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const productList = [
+    {
+      name: "lol",
+      price: 123,
+    },
+    { name: "lolkek", price: 1334 },
+  ];
   const films = ["batman", "spider-man", "superman", "witcher", "something"];
   const books = [
     {
@@ -52,33 +58,18 @@ function App() {
         "A romantic novel that critiques the British landed gentry at the end of the 18th century.",
     },
   ];
+  const text = "All rights reserved, 2024";
+  const name = "Mark";
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ProductList products={productList} />
       <Header />
       <Main films={films} />
       <Booklist books={books} />
       <Aside />
+      <UserGreetings greetings={name} />
+      <Footer byebye={text} />
     </>
   );
 }

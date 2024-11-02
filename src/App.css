@@ -4,43 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .start-text {
   text-align: start;
 }
@@ -63,10 +33,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s;
+  cursor: pointer;
   & h1 {
     font-size: 2rem;
   }
   & p {
     max-width: 350px;
   }
+}
+.one-book:hover {
+  transform: scale(1.05);
+  background-color: grey;
+  color: white;
 }
