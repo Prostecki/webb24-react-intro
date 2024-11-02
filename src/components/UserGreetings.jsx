@@ -1,7 +1,7 @@
-function UserGreetings(props) {
+function UserGreetings({ myName }) {
   return (
     <div>
-      <h1>Hello, {props.greetings}</h1>
+      <h1>Hello, {myName}</h1>
     </div>
   );
 }
